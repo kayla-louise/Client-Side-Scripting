@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      Chapter 5: Browser Object Models
+      Client-Side Development
+
+      * Assignment uses navigator objects
+
+      Author: Kayla Cook
+      Date:   September 27, 2015
+
+      Filename: index.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Project 5-1</title>
+</head>
+
+<body>
+   <h1>
+      Project 5-1
+   </h1>
+   
+   <p></p>
+   <p></p>
+   <p></p>
+   <p></p>
+   
+   <!-- use the various navigator objects discussed in this chapter to view browser name, version, platform and agent -->
+   <script>
+   "use strict";
+   document.getElementsByTagName ("p")[0].innerHTML = "Web browser name: "+ navigator.appName;
+   document.getElementsByTagName ("p")[1].innerHTML = "Web browser version: "+ navigator.appVersion;
+   document.getElementsByTagName ("p")[2].innerHTML = "Operating platform: "+ navigator.platform;
+   document.getElementsByTagName ("p")[3].innerHTML = "User agent: "+ navigator.userAgent;
+   </script>
+   <!--HW question #6
+   <!-- Test the page out on a windows os, mac os and linux os to answer the questions -->
+    I only have mac computers however using the web developer tools on safari i was able to replicate different user agents...
+
+   <!-- How accurate is the informationreturned by the navigator objects? -->
+   a) the information seems accurate, i was a little suprised that everything returned as Netscape for the web browser name
+
+   <!-- What navigator object properties changed when viewed on different operating systems? What stayed the same? -->
+   b) The web browser name and operating platform were always the same however depedning on what user agent i was replicating and what device i was  replicating being on, the web browser version and user agents were different
+
+   <!--Can you see any challenges or uses for developers in using this feature ? -->
+   c) I can see challenges because the web browser name is not accurate, and the user agent and web browser version are not accurate if someone is replicating different browsers. However the average person probably wouldnt be doing that so the later doesnt apply to them. It would be userful to get a snpashot of what your users are using so you can develop accordingly -->
+</body>
+</html>
