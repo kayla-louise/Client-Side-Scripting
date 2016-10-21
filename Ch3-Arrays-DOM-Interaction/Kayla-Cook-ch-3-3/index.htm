@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      Chapter 3: Arrays
+      Client-Side Development
+
+      * Assignment uses arrays to populate DOM
+
+      Author: Kayla Cook
+      Date:   September 11, 2015
+
+      Filename: index.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Project 3-3</title>
+   <link rel="stylesheet" href="styles.css" />
+   <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+   <header>
+      <h1>
+         Project 3-3
+      </h1>
+   </header>
+
+   <article>
+      <h2>Scouting Locations</h2>
+      <div id="results">
+          <ul>
+             <li id="item1"></li>
+             <li id="item2"></li>
+             <li id="item3"></li>
+             <li id="item4"></li>
+             <li id="item5"></li>
+          </ul>
+      </div>
+   </article>
+
+   <!-- Create an array filled with cities of your choice -->
+   <!-- Next, create a function that populates the html list from the array -->
+   <!--Note: This must work in all modern browsers including IE -->
+   <script>
+   //global variable
+   var places = ["Sausalito", "Bemidji", "Portland", "Albany", "Denver"];
+   //function
+      function processPlaces() {
+        var i=0;
+        while (i<5){
+          document.getElementsByTagName ("li")[i].innerHTML=places[i];
+          i++;
+        }
+   }
+   //backwards compatibility thanks IE 
+   if (window.addEventListener) {
+    window.addEventListener("load", processPlaces, false);
+   }
+   else if (window.attachEvent) {
+    window.attachEvent("onload", processPlaces);
+   }
+   </script>
+</body>
+</html>
